@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/*  ========= HEADER ========= */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7.5rem; /* 120px */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 61.875rem; /* 990px */
+}
+
+nav ul {
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  padding: 0.9375rem; /* 15px */
+  color: #727272;
+  display: block; /* Display block para poder alterar as propriedades*/
+  text-transform: uppercase;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+.home,
+li a:hover {
+  background: #39aae1;
+  color: whitesmoke;
+}
+
+/*  ===========  BANNER  =============== */
+
+/* Trabalhando a imagem pelo CSS fica mais fácil controlar a imagem e adicionar outros containers */
+#banner {
+  background-image: url('/assets/images/img1.jpg');
+  background-position: center;
+  background-size: cover; /* Adaptando ao tamanho do monitor*/
+  height: 41.875rem; /* Se não delimitar uma altura para a imagem, ela não vai aparecer */
+
+  /*  Distribuindo dentro da section, já que é filho direto da #banner */
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.banner_headline {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner_headline h1 {
+  color: #ffffff;
+  font-size: 4.375rem;
+  text-shadow: 0px 1px 0px #555555;
+  max-width: 21.875rem;
+}
+
+.banner_headline h2 {
+  color: #ffffff;
+  font-size: 1.3125rem;
+  text-shadow: 0px 1px 0px #555555;
+  max-width: 21.875rem;
+  margin-top: 1.875rem;
+}
+
+.banner_options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 13.125rem;
+}
+
+.banners {
+  flex: 1;
+  text-align: center;
+  color: white;
+  padding: 1.25rem;
+}
+
+.b1 {
+  background: #39aae1;
+}
+
+.b2 {
+  background: #0079c7;
+}
+
+.b3 {
+  background: #2b4c99;
+}
+
+.banner_title {
+  font-size: 1.3125rem;
+}
+
+.banner_desc {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.75rem;
+}
+
+.banner_options a {
+  display: inline-block;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  padding: 0.3125rem;
+  font-size: 0.75rem;
+}
+
+.hora1,
+.hora2,
+.hora3 {
+  font-size: 0.9rem;
+  font-weight: lighter;
+  padding-top: 0.7rem;
+  border-bottom: 0.2gpx solid white;
+  display: flex;
+  justify-content: space-between;
+  line-height: 2rem;
+  border-bottom: 0.7px solid white;
+}
+
+#geral {
+  display: flex;
+  justify-content: center;
+}
+
+#geral section {
+  flex: 2;
+}
+
+#geral aside {
+  flex: 1;
+}
+
+.widget_title {
+  margin-top: 1.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.widget_title_text {
+  color: black;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.widget_title_bar {
+  width: 3.125rem;
+  height: 0.1875rem;
+  background-color: #36a9e1;
+  margin-top: 0.625rem;
+  margin-bottom: 0.6rem;
+}
+
+.news_data {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.news_posted_at {
+  background-color: #2b4c99;
+  color: white;
+  padding: 0.6rem;
+  font-size: 12px;
+}
+
+.news_comments {
+  background-color: #36a9e1;
+  padding: 0.6rem;
+  color: white;
+  margin-left: 0.2rem;
+  font-size: 12px;
+}
+
+.widget_body_content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.widget_content_body {
+  width: 125px;
+  height: 125px;
+  background-color: #36a9e1;
+  margin: 0.7rem;
+  margin-left: 1.6rem;
+}
+
+.widget_appointment_text {
+  margin-top: 1.5rem;
+}
+
+.bar-text,
+.bar-phone,
+.bar-email,
+.bar-form {
+  margin-top: 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 300px;
+}
+
+article {
+  flex: 1; /* com isso ele entende que eles terão mesmo tamanho, todos iguais*/
+  min-width: 300px;
+  margin-right: 1.25rem;
+}
+
+article a {
+  text-decoration: none;
+}
+
+article .news_thumbnail {
+  margin-top: 1.875rem;
+}
+
+article .news_thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+article .news_title {
+  margin-top: 1.5625rem;
+  margin-bottom: 1.5625rem;
+  color: black;
+  font-size: 23px;
+}
+
+article .news_resume {
+  color: #5c5c5c;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+footer {
+  background: #1e1e1e;
+  display: flex;
+  justify-content: center;
+}
+
+.footer_menu {
+  display: flex;
+  flex: 1;
+}
+
+.footer_menu a {
+  /* COm o display block ocupa toda a área, com o padding dentro do 
+  link aumenta a área clicável*/
+  display: block;
+  text-decoration: none;
+  padding: 1.25rem;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.insurance,
+.records,
+.payment {
+  flex: 1;
+}
+
+.insurance {
+  background-color: #39aae1;
+}
+
+.insurance p {
+  margin-top: 12px;
+}
+
+.records {
+  background-color: #0079c7;
+}
+
+.records p {
+  margin-top: 12px;
+}
+
+.payment {
+  background-color: #2b4c99;
+}
+
+.payment p {
+  margin-top: 12px;
+}
+
+.footer_area {
+  display: flex;
+}
+
+.footer_area_item {
+  color: #ffffff;
+  flex: 1;
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
+footer .widget_title_text {
+  color: #ffffff;
+}
+
+.footer_copy {
+  border-top: 1px solid #2c2c2c;
+  height: 40px;
+  line-height: 40px;
+  color: #5c5c5c;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.medicenter_text {
+  font-size: 12px;
+  color: #cccc;
+}
+
+.medicenter_contact {
+  color: #cccc;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding-right: 10px;
+  line-height: 20px;
+}
+
+.posts {
+  color: #cccc;
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.post1,
+.post2,
+.post3 {
+  margin-top: 10px;
+  line-height: 17px;
+}
+
+.posts a {
+  text-decoration: none;
+  color: rgb(101, 101, 187);
+}
+
+.tweets {
+  color: #cccc;
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.tweet1,
+.tweet2,
+.tweet3 {
+  margin-top: 10px;
+  line-height: 17px;
+}
+
+.tweets a {
+  text-decoration: none;
+  color: rgb(101, 101, 187);
+}
